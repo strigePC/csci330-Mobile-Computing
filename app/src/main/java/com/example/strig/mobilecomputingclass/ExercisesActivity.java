@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.strig.mobilecomputingclass.le180116.TouchAndViewActivity;
+import com.example.strig.mobilecomputingclass.le180118.ToolbarRESTActivity;
 import com.example.strig.mobilecomputingclass.le180329.LiveWallpaperActivity;
 
 public class ExercisesActivity extends AppCompatActivity {
@@ -28,10 +29,10 @@ public class ExercisesActivity extends AppCompatActivity {
                     intent = new Intent(ExercisesActivity.this, TouchAndViewActivity.class);
                     startActivity(intent);
                 } else if (i == 1) {
-//                    intent = new Intent(ExercisesActivity.this, LiveWallpaperActivity.class);
-//                    startActivity(intent);
+                    intent = new Intent(ExercisesActivity.this, ToolbarRESTActivity.class);
+                    startActivity(intent);
                 } else if (i == 2) {
-//                    intent = new Intent(ExercisesActivity.this, LiveWallpaperActivity.class);
+//                    intent = new Intent(ExercisesActivity.this, ToolbarRESTActivity.class);
 //                    startActivity(intent);
                 } else if (i == 3) {
 //                    intent = new Intent(ExercisesActivity.this, LiveWallpaperActivity.class);

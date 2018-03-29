@@ -10,7 +10,7 @@
     </string-array>
     <string-array name="exercises">
         <item>16/01/18 - Touch and Custom Views</item>
-        <item>18/01/18 - Toolbars</item>
+        <item>18/01/18 - Toolbar and REST API</item>
         <item>23/01/18 - Sensors</item>
         <item>25/01/18 - Camera</item>
         <item>30/01/18 - ListView</item>
@@ -27,4 +27,12 @@
         <item>13/03/18 - Testing</item>
         <item>29/03/18 - Live Wallpaper</item>
     </string-array>
+
+    <!--le180118-->
+    <string name="action_settings">Settings</string>
+    <string name="show_weather">Show Weather</string>
+    <string name="temperature_value">%1$.1f°C</string>
+    <string name="temperature_text_1">Currently in Astana</string>
+    <string name="weather_api_url">https://api.darksky.net/forecast/738d9a59b3e1e73d1a8bf6b6053c6499/51.0891098,71.3988468</string>
+    <string name="temperature_text_2">Last Updated: %1$s</string>
 </resources>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.strig.mobilecomputingclass">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -34,7 +36,8 @@
         </service>
 
         <activity android:name=".ExercisesActivity" />
-        <activity android:name=".HomeworkActivity"></activity>
+        <activity android:name=".HomeworkActivity" />
+        <activity android:name=".le180118.ToolbarRESTActivity"></activity>
     </application>
 
 </manifest>
