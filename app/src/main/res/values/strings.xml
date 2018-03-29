@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MobileComputingClass</string>
+    <string-array name="assignments">
+        <item>Homework</item>
+        <item>Exercises</item>
+    </string-array>
+    <string-array name="homework">
+        <item>Homework 1 - Clicker App</item>
+        <item>Homework 2 - Map App</item>
+    </string-array>
+    <string-array name="exercises">
+        <item>16/01/18 - Touch and Custom Views</item>
+        <item>18/01/18 - Toolbars</item>
+        <item>23/01/18 - Sensors</item>
+        <item>25/01/18 - Camera</item>
+        <item>30/01/18 - ListView</item>
+        <item>01/02/18 - Persistence</item>
+        <item>06/02/18 - Started Services</item>
+        <item>08/02/18 - Bound Services</item>
+        <item>13/02/18 - Fragments</item>
+        <item>15/02/18 - Notifications</item>
+        <item>20/02/18 - Firebase</item>
+        <item>22/02/18 - Google Maps API</item>
+        <item>27/02/18 - Wi-Fi Direct</item>
+        <item>01/03/18 - OpenGL</item>
+        <item>06/03/18 - OpenGL Attributes</item>
+        <item>13/03/18 - Testing</item>
+        <item>29/03/18 - Live Wallpaper</item>
+    </string-array>
+</resources>

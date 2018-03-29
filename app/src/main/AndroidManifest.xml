@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.strig.mobilecomputingclass">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".le180116.TouchAndViewActivity" />
+        <activity android:name=".le180329.LiveWallpaperActivity" />
+
+        <service
+            android:name=".le180329.NUWallpaperService"
+            android:enabled="true"
+            android:label="Wallpaper Example"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.wallpaper"
+                android:resource="@xml/yourwallpaper" />
+        </service>
+
+        <activity android:name=".ExercisesActivity" />
+        <activity android:name=".HomeworkActivity"></activity>
+    </application>
+
+</manifest>
