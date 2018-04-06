@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.strig.mobilecomputingclass"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -16,14 +16,41 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'apt_generated']
+            res.srcDirs = ['src/main/res',
+                           'src/main/res/layouts/main',
+                           'src/main/res/layouts/le180116',
+                           'src/main/res/layouts/le180118',
+                           'src/main/res/layouts/le180123',
+                           'src/main/res/layouts/le180125',
+                           'src/main/res/layouts/le180130',
+                           'src/main/res/layouts/le180201',
+                           'src/main/res/layouts/le180206',
+                           'src/main/res/layouts/le180208',
+                           'src/main/res/layouts/le180213',
+                           'src/main/res/layouts/le180215',
+                           'src/main/res/layouts/le180220',
+                           'src/main/res/layouts/le180222',
+                           'src/main/res/layouts/le180227',
+                           'src/main/res/layouts/le180301',
+                           'src/main/res/layouts/le180306',
+                           'src/main/res/layouts/le180313',
+                           'src/main/res/layouts/le180329']
+        }
+    }
 }
 
 dependencies {
-    compile 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
+    implementation 'org.springframework.android:spring-android-rest-template:2.0.0.M3'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.google.android.gms:play-services-maps:12.0.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-intents:3.0.1'
 }

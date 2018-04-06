@@ -9,23 +9,23 @@
         <item>Homework 2 - Map App</item>
     </string-array>
     <string-array name="exercises">
-        <item>16/01/18 - Touch and Custom Views</item>
-        <item>18/01/18 - Toolbar and REST API</item>
-        <item>23/01/18 - Sensors</item>
-        <item>25/01/18 - Camera</item>
+        <item>16/01/18 - (+) Touch and Custom Views</item>
+        <item>18/01/18 - (+) Toolbar and REST API</item>
+        <item>23/01/18 - (+) Sensors</item>
+        <item>25/01/18 - (+) Camera</item>
         <item>30/01/18 - ListView</item>
-        <item>01/02/18 - Persistence</item>
-        <item>06/02/18 - Started Services</item>
-        <item>08/02/18 - Bound Services</item>
-        <item>13/02/18 - Fragments</item>
+        <item>01/02/18 - (+) Persistence</item>
+        <item>06/02/18 - (+) Started Services</item>
+        <item>08/02/18 - (+/-) Bound Services</item>
+        <item>13/02/18 - (+) Fragments</item>
         <item>15/02/18 - Notifications</item>
         <item>20/02/18 - Firebase</item>
-        <item>22/02/18 - Google Maps API</item>
+        <item>22/02/18 - (+) Google Maps API</item>
         <item>27/02/18 - Wi-Fi Direct</item>
-        <item>01/03/18 - OpenGL</item>
+        <item>01/03/18 - (+) OpenGL</item>
         <item>06/03/18 - OpenGL Attributes</item>
-        <item>13/03/18 - Testing</item>
-        <item>29/03/18 - Live Wallpaper</item>
+        <item>13/03/18 - (+) Testing</item>
+        <item>29/03/18 - (+/-) Live Wallpaper</item>
     </string-array>
 
     <!--le180118-->
@@ -35,4 +35,34 @@
     <string name="temperature_text_1">Currently in Astana</string>
     <string name="weather_api_url">https://api.darksky.net/forecast/738d9a59b3e1e73d1a8bf6b6053c6499/51.0891098,71.3988468</string>
     <string name="temperature_text_2">Last Updated: %1$s</string>
+
+    <!--le180201-->
+    <string name="player_s_fullname">Player\'s Fullname</string>
+    <string name="country">Country</string>
+    <string name="age">Age</string>
+    <string name="skill">Skill</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
+
+    <!--le1810206-->
+    <string name="start_service">Start Service</string>
+
+    <!--le180313-->
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="submit">Submit</string>
+
+    <!--le180301-->
+    <string name="hello">Hello, OpenGL ES 2.0!</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!--le180215-->
+    <string name="notify">Notify</string>
+    <string name="set_wallpaper">Set Wallpaper</string>
+    <string name="title">Title</string>
+    <string name="director">Director</string>
+    <string name="description">Description</string>
+    <string name="desc">Desc</string>
+
+
 </resources>

@@ -3,6 +3,16 @@
     package="com.example.strig.mobilecomputingclass">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -18,11 +28,49 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".le180116.TouchAndViewActivity" />
-        <activity android:name=".le180329.LiveWallpaperActivity" />
+        <activity android:name=".le180301_OpenGL.OpenGLES20Activity" />
+        <activity android:name=".ExercisesActivity" />
+        <activity android:name=".HomeworkActivity" />
+        <activity android:name=".le180116_TouchAndCustomViews.TouchAndViewActivity" />
+        <activity android:name=".le180118_ToolbarAndRESTAPIs.ToolbarRESTActivity" />
+        <activity android:name=".le180123_Sensors.SensorActivity" />
+        <activity android:name=".le180125_Camera.CameraActivity" />
+        <activity android:name=".le180201_Persistence.PersistenceActivity" />
+        <activity android:name=".le180206_StartedServices.StartedServiceActivity" />
 
         <service
-            android:name=".le180329.NUWallpaperService"
+            android:name=".le180206_StartedServices.LogMessageService"
+            android:exported="false" />
+
+        <activity android:name=".le180208_BoundServices.BoundServiceActivity" />
+
+        <service android:name=".le180208_BoundServices.GPSService" />
+
+        <activity android:name=".le180213_Fragments.FragmentsActivity" />
+        <activity android:name=".le180215_Notifications.NotificationActivity" />
+
+        <receiver
+            android:name=".le180215_Notifications.AirplaneModeReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.HEADSET_PLUG" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".le180222_GoogleMaps.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".le180313_Testing.TestingActivity" />
+        <activity android:name=".le180313_Testing.TextActivity" />
+        <activity android:name=".le180329_LiveWallpaper.LiveWallpaperActivity" />
+
+        <service
+            android:name=".le180329_LiveWallpaper.NUWallpaperService"
             android:enabled="true"
             android:label="Wallpaper Example"
             android:permission="android.permission.BIND_WALLPAPER">
@@ -35,9 +83,8 @@
                 android:resource="@xml/yourwallpaper" />
         </service>
 
-        <activity android:name=".ExercisesActivity" />
-        <activity android:name=".HomeworkActivity" />
-        <activity android:name=".le180118.ToolbarRESTActivity"></activity>
+        <activity android:name=".hw01_Clicker.EyeBallClicker" />
+        <activity android:name=".hw02_MapsAssignment.Mapito" />
     </application>
 
 </manifest>
