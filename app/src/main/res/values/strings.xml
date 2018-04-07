@@ -40,6 +40,8 @@
     <string name="refresh_button_text">Refresh</string>
     <string name="refresh_button_text_update">Loading…</string>
     <string name="refresh_text_template">Processing %1$s</string>
+    <string name="tap_on_the_currency_to_show_info">Tap on the currency to show info</string>
+    <string name="info_text_template">Country Name: %1$s\nCurrency Code:%2$s (1 %2$s = %3$.2f KZT)</string>
 
     <!--le180118-->
     <string name="action_settings">Settings</string>

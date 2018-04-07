@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.location.Location;
 import android.os.AsyncTask;
@@ -24,6 +23,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.GroundOverlay;
 import com.google.android.gms.maps.model.GroundOverlayOptions;
 import com.google.android.gms.maps.model.LatLng;
 
@@ -43,11 +43,13 @@ public class MapitoActivity extends AppCompatActivity
         implements
         GoogleMap.OnMyLocationButtonClickListener,
         GoogleMap.OnMyLocationClickListener,
+        GoogleMap.OnGroundOverlayClickListener,
         OnMapReadyCallback {
 
     private GoogleMap mMap;
     private Button refreshButton;
     private TextView refreshText;
+    private TextView infoText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +63,7 @@ public class MapitoActivity extends AppCompatActivity
 
         refreshButton = findViewById(R.id.hw02_refresh_button);
         refreshText = findViewById(R.id.hw02_refresh_text);
+        infoText = findViewById(R.id.hw02_info_text);
 
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +86,7 @@ public class MapitoActivity extends AppCompatActivity
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
         }
         mMap.setMyLocationEnabled(true);
+        mMap.setOnGroundOverlayClickListener(this);
     }
 
 
@@ -97,6 +101,11 @@ public class MapitoActivity extends AppCompatActivity
     @Override
     public void onMyLocationClick(@NonNull Location location) {
         Toast.makeText(this, "Current location:\n" + location, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onGroundOverlayClick(GroundOverlay groundOverlay) {
+        infoText.setText((String) groundOverlay.getTag());
     }
 
     public class CurrencyUpdateAsyncTask extends AsyncTask<String, String, List<CurrencyLocation>> {
@@ -147,7 +156,9 @@ public class MapitoActivity extends AppCompatActivity
                                 .getJSONObject(0);
 
                         currencyLocationList.add(new CurrencyLocation(
-                                "",
+                                country.getString("name"),
+                                countryCurrency.getString("symbol") != null ? countryCurrency.getString("symbol") : "",
+                                countryCurrency.getString("code"),
                                 codeCurrencyMap.get(countryCurrency.getString("code")),
                                 new LatLng(latlng.getDouble(0), latlng.getDouble(1))
                         ));
@@ -180,7 +191,12 @@ public class MapitoActivity extends AppCompatActivity
                 mMap.addGroundOverlay(new GroundOverlayOptions()
                         .image(createPureTextIcon(String.format("%.2f", currencyLocation.getCurrency())))
                         .position(currencyLocation.getLocation(), 500000)
-                        .clickable(true));
+                        .clickable(true))
+                        .setTag(String.format(getString(R.string.info_text_template),
+                                currencyLocation.getCountryName(),
+                                currencyLocation.getCurrencyCode(),
+                                currencyLocation.getCurrency()));
+
             }
         }
     }
@@ -198,12 +214,6 @@ public class MapitoActivity extends AppCompatActivity
         Canvas canvas = new Canvas(image);
 
         canvas.translate(0, height);
-
-        // For development only:
-        // Set a background in order to see the
-        // full size and positioning of the bitmap.
-        // Remove that for a fully transparent icon.
-        canvas.drawColor(Color.LTGRAY);
 
         canvas.drawText(text, 0, 0, textPaint);
         BitmapDescriptor icon = BitmapDescriptorFactory.fromBitmap(image);

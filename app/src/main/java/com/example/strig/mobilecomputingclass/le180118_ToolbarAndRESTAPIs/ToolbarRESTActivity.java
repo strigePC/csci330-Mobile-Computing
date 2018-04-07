@@ -20,7 +20,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.concurrent.ExecutionException;
 
 public class ToolbarRESTActivity extends AppCompatActivity {
 
@@ -65,14 +64,7 @@ public class ToolbarRESTActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.weather_item:
                 WeatherAsyncTask loadInfo = new WeatherAsyncTask();
-                try {
-                    loadInfo.execute(getString(R.string.weather_api_url)).get();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                }
-
+                loadInfo.execute(getString(R.string.weather_api_url));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

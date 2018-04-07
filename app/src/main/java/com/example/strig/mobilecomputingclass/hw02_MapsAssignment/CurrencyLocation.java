@@ -3,12 +3,16 @@ package com.example.strig.mobilecomputingclass.hw02_MapsAssignment;
 import com.google.android.gms.maps.model.LatLng;
 
 public class CurrencyLocation {
+    private String countryName;
+    private String sign;
+    private String currencyCode;
     private LatLng location;
     private Double currency;
-    private String sign;
 
-    public CurrencyLocation(String sign, Double currency, LatLng location) {
+    public CurrencyLocation(String countryName, String sign, String currencyCode, Double currency, LatLng location) {
+        setCountryName(countryName);
         setSign(sign);
+        setCurrencyCode(currencyCode);
         setCurrency(currency);
         setLocation(location);
     }
@@ -40,5 +44,21 @@ public class CurrencyLocation {
     @Override
     public String toString() {
         return String.format("Location [%f, %f], Currency (%s): %f", location.latitude, location.longitude, sign, currency);
+    }
+
+    public String getCountryName() {
+        return countryName;
+    }
+
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
+    }
+
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
     }
 }
