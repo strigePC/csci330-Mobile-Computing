@@ -84,7 +84,9 @@
         </service>
 
         <activity android:name=".hw01_Clicker.EyeBallClicker" />
-        <activity android:name=".hw02_MapsAssignment.Mapito" />
+        <activity
+            android:name=".hw02_MapsAssignment.MapitoActivity"
+            android:label="@string/title_activity_mapito"></activity>
     </application>
 
 </manifest>

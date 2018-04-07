@@ -38,7 +38,10 @@ android {
                            'src/main/res/layouts/le180301',
                            'src/main/res/layouts/le180306',
                            'src/main/res/layouts/le180313',
-                           'src/main/res/layouts/le180329']
+                           'src/main/res/layouts/le180329',
+                           'src/main/res/layouts/hw01',
+                           'src/main/res/layouts/hw02'
+            ]
         }
     }
 }

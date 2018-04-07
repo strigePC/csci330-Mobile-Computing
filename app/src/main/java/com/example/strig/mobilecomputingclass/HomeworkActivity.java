@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.example.strig.mobilecomputingclass.hw01_Clicker.EyeBallClicker;
-import com.example.strig.mobilecomputingclass.hw02_MapsAssignment.Mapito;
+import com.example.strig.mobilecomputingclass.hw02_MapsAssignment.MapitoActivity;
 
 public class HomeworkActivity extends AppCompatActivity {
     private ListView homeworkList;
@@ -29,7 +29,7 @@ public class HomeworkActivity extends AppCompatActivity {
                         intent = new Intent(HomeworkActivity.this, EyeBallClicker.class);
                         break;
                     case 1:
-                        intent = new Intent(HomeworkActivity.this, Mapito.class);
+                        intent = new Intent(HomeworkActivity.this, MapitoActivity.class);
                         break;
                 }
 

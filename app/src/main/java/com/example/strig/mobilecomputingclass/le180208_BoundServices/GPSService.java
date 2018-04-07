@@ -19,7 +19,6 @@ import android.util.Log;
 
 public class GPSService extends Service {
     public final IBinder binder = new GPSServiceBinder();
-    private int myState = 0;
     private LocationManager locationManager;
     private double latitude;
     private double longitude;
