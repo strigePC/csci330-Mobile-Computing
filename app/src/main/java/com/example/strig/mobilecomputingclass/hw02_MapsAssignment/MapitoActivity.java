@@ -108,12 +108,12 @@ public class MapitoActivity extends AppCompatActivity
         infoText.setText((String) groundOverlay.getTag());
     }
 
-    public class CurrencyUpdateAsyncTask extends AsyncTask<String, String, List<CurrencyLocation>> {
+    public class CurrencyUpdateAsyncTask extends AsyncTask<String, Integer, List<CurrencyLocation>> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
             refreshButton.setEnabled(false);
-            refreshButton.setText(getString(R.string.refresh_button_text_update));
+            refreshButton.setText(getString(R.string.hw02_refresh_button_text_update));
         }
 
         @Override
@@ -126,8 +126,8 @@ public class MapitoActivity extends AppCompatActivity
             Double userCurrency;
 
 //            URLs
-            String countriesUrl = getString(R.string.countries_api);
-            String currenciesListUrl = getString(R.string.currency_layer_api);
+            String countriesUrl = getString(R.string.hw02_countries_rest_url);
+            String currenciesListUrl = getString(R.string.hw02_currency_rest_url);
 
             RestTemplate restTemplate = new RestTemplate();
             restTemplate.getMessageConverters().add(new StringHttpMessageConverter());
@@ -147,7 +147,9 @@ public class MapitoActivity extends AppCompatActivity
 
                 for (int i = 0; i < countriesArray.length(); i++) {
                     JSONObject country = countriesArray.getJSONObject(i);
-                    publishProgress(country.getString("name"));
+                    if (i % 50 == 0) {
+                        publishProgress(i, countriesArray.length());
+                    }
                     try {
                         JSONArray latlng = country.getJSONArray("latlng");
 
@@ -159,6 +161,7 @@ public class MapitoActivity extends AppCompatActivity
                                 country.getString("name"),
                                 countryCurrency.getString("symbol") != null ? countryCurrency.getString("symbol") : "",
                                 countryCurrency.getString("code"),
+                                countryCurrency.getString("name"),
                                 codeCurrencyMap.get(countryCurrency.getString("code")),
                                 new LatLng(latlng.getDouble(0), latlng.getDouble(1))
                         ));
@@ -172,19 +175,20 @@ public class MapitoActivity extends AppCompatActivity
         }
 
         @Override
-        protected void onProgressUpdate(String... params) {
+        protected void onProgressUpdate(Integer... params) {
             super.onProgressUpdate(params);
-            String countryName = params[0];
+            Integer progress = params[0];
+            Integer total = params[1];
 
-            Log.e("TAG", "Processing " + countryName);
-            refreshText.setText(String.format(getString(R.string.refresh_text_template), countryName));
+            Log.e("TAG", String.format(getString(R.string.hw02_refresh_text_template), progress, total));
+            refreshText.setText(String.format(getString(R.string.hw02_refresh_text_template), progress, total));
         }
 
         @Override
         protected void onPostExecute(List<CurrencyLocation> currencyLocations) {
             super.onPostExecute(currencyLocations);
             refreshButton.setEnabled(true);
-            refreshButton.setText(getString(R.string.refresh_button_text));
+            refreshButton.setText(getString(R.string.hw02_refresh_button_text));
             refreshText.setText("");
 
             for (CurrencyLocation currencyLocation : currencyLocations) {
@@ -192,8 +196,9 @@ public class MapitoActivity extends AppCompatActivity
                         .image(createPureTextIcon(String.format("%.2f", currencyLocation.getCurrency())))
                         .position(currencyLocation.getLocation(), 500000)
                         .clickable(true))
-                        .setTag(String.format(getString(R.string.info_text_template),
+                        .setTag(String.format(getString(R.string.hw02_info_text_template),
                                 currencyLocation.getCountryName(),
+                                currencyLocation.getCurrencyName(),
                                 currencyLocation.getCurrencyCode(),
                                 currencyLocation.getCurrency()));
 

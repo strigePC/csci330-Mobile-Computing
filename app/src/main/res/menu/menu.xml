@@ -1,20 +1,16 @@
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/action_settings"
-        android:title="@string/action_settings"
         android:orderInCategory="100"
+        android:title="@string/le180118_action_settings"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/weather_item"
         android:icon="@drawable/ic_weather_icon"
-        android:title="@string/show_weather"
         android:orderInCategory="0"
-        app:showAsAction="ifRoom|withText"
-        />
+        android:title="@string/le180118_action_weather"
+        app:showAsAction="ifRoom|withText" />
 </menu>

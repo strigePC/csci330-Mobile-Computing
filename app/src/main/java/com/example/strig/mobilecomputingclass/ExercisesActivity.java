@@ -16,10 +16,12 @@ import com.example.strig.mobilecomputingclass.le180206_StartedServices.StartedSe
 import com.example.strig.mobilecomputingclass.le180208_BoundServices.BoundServiceActivity;
 import com.example.strig.mobilecomputingclass.le180213_Fragments.FragmentsActivity;
 import com.example.strig.mobilecomputingclass.le180215_Notifications.NotificationActivity;
+import com.example.strig.mobilecomputingclass.le180220_Firebase.FirebaseActivity;
 import com.example.strig.mobilecomputingclass.le180222_GoogleMaps.MapsActivity;
 import com.example.strig.mobilecomputingclass.le180301_OpenGL.OpenGLES20Activity;
 import com.example.strig.mobilecomputingclass.le180313_Testing.TestingActivity;
 import com.example.strig.mobilecomputingclass.le180329_LiveWallpaper.LiveWallpaperActivity;
+import com.example.strig.mobilecomputingclass.le180403_ViewpagerAndSnackbar.ViewpagerAndSnackbarActivity;
 
 public class ExercisesActivity extends AppCompatActivity {
     private ListView exercisesList;
@@ -67,7 +69,7 @@ public class ExercisesActivity extends AppCompatActivity {
                         intent = new Intent(ExercisesActivity.this, NotificationActivity.class);
                         break;
                     case 10:
-//                        intent = new Intent(ExercisesActivity.this, FirebaseActivity.class);
+                        intent = new Intent(ExercisesActivity.this, FirebaseActivity.class);
                         break;
                     case 11:
                         intent = new Intent(ExercisesActivity.this, MapsActivity.class);
@@ -88,7 +90,7 @@ public class ExercisesActivity extends AppCompatActivity {
                         intent = new Intent(ExercisesActivity.this, LiveWallpaperActivity.class);
                         break;
                     case 17:
-//                        intent = new Intent(ExercisesActivity.this, PagerActivity.class);
+                        intent = new Intent(ExercisesActivity.this, ViewpagerAndSnackbarActivity.class);
                         break;
                 }
 

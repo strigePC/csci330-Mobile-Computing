@@ -47,7 +47,7 @@ public class EyeBallClicker extends AppCompatActivity {
                 String end = (counter.intValue() % 10 == 1) ? "" : "(s)";
 
                 String newCounterText = String.format(
-                        getResources().getString(R.string.counter_text),
+                        getResources().getString(R.string.hw01_counter_template),
                         counterString,
                         end);
                 counterText.setText(newCounterText);

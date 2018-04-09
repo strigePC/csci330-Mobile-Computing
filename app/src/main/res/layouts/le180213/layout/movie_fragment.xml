@@ -9,7 +9,7 @@
         android:id="@+id/le180213_movie_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title"
+        android:text="@string/le180213_title_text_default"
         android:textAllCaps="true"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -18,19 +18,19 @@
         android:id="@+id/le180213_movie_director"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/director"
+        android:text="@string/le180213_director_text_default"
         android:textStyle="italic" />
 
     <ImageView
         android:id="@+id/le180213_movie_poster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/desc" />
+        android:contentDescription="@string/le180213_image_description_default" />
 
     <TextView
         android:id="@+id/le180213_movie_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/description"/>
+        android:text="@string/le180213_description_text_default"/>
 
 </LinearLayout>

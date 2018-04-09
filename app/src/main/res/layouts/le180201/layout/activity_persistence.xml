@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text"
-            android:hint="@string/player_s_fullname"/>
+            android:hint="@string/le180201_field_player_s_fullname"/>
     </LinearLayout>
 
     <LinearLayout
@@ -30,14 +30,14 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:layout_weight="3"
-            android:hint="@string/country"/>
+            android:hint="@string/le180201_field_country"/>
         <EditText
             android:id="@+id/le180201_age_input"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:layout_weight="1"
-            android:hint="@string/age"/>
+            android:hint="@string/le180201_field_age"/>
 
         <EditText
             android:id="@+id/le180201_skill_input"
@@ -45,19 +45,19 @@
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:layout_weight="1"
-            android:hint="@string/skill"/>
+            android:hint="@string/le180201_field_skill"/>
     </LinearLayout>
     <Button
         android:id="@+id/le180201_search_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/search"/>
+        android:text="@string/le180201_button_search"/>
 
     <Button
         android:id="@+id/le180201_add_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add" />
+        android:text="@string/le180201_button_add" />
 
     <LinearLayout
         android:id="@+id/le180201_players"

@@ -3,12 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.strig.mobilecomputingclass.le180329_LiveWallpaper.LiveWallpaperActivity">
+    tools:context=".le180403_ViewpagerAndSnackbar.ViewpagerAndSnackbarActivity">
 
-    <Button
-        android:id="@+id/le180329_setwallpaper"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/le180403_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/le180329_button_text"/>
+        android:layout_height="match_parent" />
 
 </android.support.constraint.ConstraintLayout>

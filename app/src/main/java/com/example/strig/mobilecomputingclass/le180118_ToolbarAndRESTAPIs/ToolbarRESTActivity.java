@@ -42,10 +42,10 @@ public class ToolbarRESTActivity extends AppCompatActivity {
         temperatureView = findViewById(R.id.le180118_temperature);
         lastUpdatedView = findViewById(R.id.le180118_temperatureText2);
 
-        String strTemperatureFormat = getResources().getString(R.string.temperature_value);
+        String strTemperatureFormat = getResources().getString(R.string.le180118_temperature_template);
         String strTemperature = String.format(strTemperatureFormat, 0.0);
 
-        String strLastUpdatedFormat = getResources().getString(R.string.temperature_text_2);
+        String strLastUpdatedFormat = getResources().getString(R.string.le180118_temperature_last_updated_template);
         String strLastUpdated = String.format(strLastUpdatedFormat, "");
 
         temperatureView.setText(strTemperature);
@@ -64,7 +64,7 @@ public class ToolbarRESTActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.weather_item:
                 WeatherAsyncTask loadInfo = new WeatherAsyncTask();
-                loadInfo.execute(getString(R.string.weather_api_url));
+                loadInfo.execute(getString(R.string.le180118_weather_rest_url));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -102,10 +102,10 @@ public class ToolbarRESTActivity extends AppCompatActivity {
         protected void onPostExecute(Double result) {
             String lastUpdated = DateFormat.getDateTimeInstance().format(new Date());
 
-            String strTemperatureFormat = getResources().getString(R.string.temperature_value);
+            String strTemperatureFormat = getResources().getString(R.string.le180118_temperature_template);
             String strTemperature = String.format(strTemperatureFormat, result);
 
-            String strLastUpdatedFormat = getResources().getString(R.string.temperature_text_2);
+            String strLastUpdatedFormat = getResources().getString(R.string.le180118_temperature_last_updated_template);
             String strLastUpdated = String.format(strLastUpdatedFormat, lastUpdated);
 
             temperatureView.setText(strTemperature);

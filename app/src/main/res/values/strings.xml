@@ -16,74 +16,87 @@
         <item>30/01/18 - ListView</item>
         <item>01/02/18 - (+) Persistence</item>
         <item>06/02/18 - (+) Started Services</item>
-        <item>08/02/18 - (+/-) Bound Services</item>
+        <item>08/02/18 - (+) Bound Services</item>
         <item>13/02/18 - (+) Fragments</item>
-        <item>15/02/18 - Notifications</item>
-        <item>20/02/18 - Firebase</item>
+        <item>15/02/18 - (+/-) Notifications</item>
+        <item>20/02/18 - (+/-) Firebase</item>
         <item>22/02/18 - (+) Google Maps API</item>
         <item>27/02/18 - Wi-Fi Direct</item>
         <item>01/03/18 - (+) OpenGL</item>
         <item>06/03/18 - OpenGL Attributes</item>
         <item>13/03/18 - (+) Testing</item>
-        <item>29/03/18 - (+/-) Live Wallpaper</item>
+        <item>29/03/18 - (+) Live Wallpaper</item>
+        <item>03/04/18 - (+) Viewpager and Snackbar</item>
     </string-array>
 
     <!--hw01-->
-    <string name="default_text">Touch the eye!</string>
-    <string name="counter_text">Your score:\n %1$s point%2$s</string>
-    <string name="image_description">Icon of the eye</string>
+    <string name="hw01_default_text">Touch the eye!</string>
+    <string name="hw01_counter_template">Your score:\n %1$s point%2$s</string>
+    <string name="hw01_image_description">Icon of the eye</string>
 
     <!--hw02-->
-    <string name="currency_layer_api">http://apilayer.net/api/live?access_key=97f7938b1d1501825ecbb86dad195d12</string>
-    <string name="countries_api">https://restcountries.eu/rest/v2/all?fields=name;currencies;latlng</string>
-    <string name="title_activity_mapito">Map</string>
-    <string name="refresh_button_text">Refresh</string>
-    <string name="refresh_button_text_update">Loading…</string>
-    <string name="refresh_text_template">Processing %1$s</string>
-    <string name="tap_on_the_currency_to_show_info">Tap on the currency to show info</string>
-    <string name="info_text_template">Country Name: %1$s\nCurrency Code:%2$s (1 %2$s = %3$.2f KZT)</string>
+    <!--URLs-->
+    <string name="hw02_currency_rest_url">http://apilayer.net/api/live?access_key=97f7938b1d1501825ecbb86dad195d12</string>
+    <string name="hw02_countries_rest_url">https://restcountries.eu/rest/v2/all?fields=name;currencies;latlng</string>
+    <!--App Title-->
+    <string name="hw02_title_activity_mapito">Mapito</string>
+    <!--Buttons-->
+    <string name="hw02_refresh_button_text">Refresh</string>
+    <string name="hw02_refresh_button_text_update">Loading…</string>
+    <!--Text-->
+    <string name="hw02_refresh_text_template">Processed %1$d/%2$d countries</string>
+    <string name="hw02_info_text_default">Tap on the currency to show info</string>
+    <string name="hw02_info_text_template">Country Name: %1$s\nCurrency: %2$s (1 %3$s = %4$.2f KZT)</string>
 
     <!--le180118-->
-    <string name="action_settings">Settings</string>
-    <string name="show_weather">Show Weather</string>
-    <string name="temperature_value">%1$.1f°C</string>
-    <string name="temperature_text_1">Currently in Astana</string>
-    <string name="weather_api_url">https://api.darksky.net/forecast/738d9a59b3e1e73d1a8bf6b6053c6499/51.0891098,71.3988468</string>
-    <string name="temperature_text_2">Last Updated: %1$s</string>
+    <string name="le180118_action_settings">Settings</string>
+    <string name="le180118_action_weather">Show Weather</string>
+    <string name="le180118_temperature_template">%1$.1f°C</string>
+    <string name="le180118_temperature_text_1">Currently in Astana</string>
+    <string name="le180118_weather_rest_url">https://api.darksky.net/forecast/738d9a59b3e1e73d1a8bf6b6053c6499/51.0891098,71.3988468</string>
+    <string name="le180118_temperature_last_updated_template">Last Updated: %1$s</string>
 
     <!--le180201-->
-    <string name="player_s_fullname">Player\'s Fullname</string>
-    <string name="country">Country</string>
-    <string name="age">Age</string>
-    <string name="skill">Skill</string>
-    <string name="search">Search</string>
-    <string name="add">Add</string>
+    <string name="le180201_field_player_s_fullname">Player\'s Fullname</string>
+    <string name="le180201_field_country">Country</string>
+    <string name="le180201_field_age">Age</string>
+    <string name="le180201_field_skill">Skill</string>
+    <string name="le180201_button_search">Search</string>
+    <string name="le180201_button_add">Add</string>
 
-    <!--le1810206-->
-    <string name="start_service">Start Service</string>
+    <!--le180206-->
+    <string name="le180206_button_start_service">Start Service</string>
 
     <!--le180213-->
-    <string name="title">Title</string>
-    <string name="director">Director</string>
-    <string name="description">Description</string>
-    <string name="desc">Desc</string>
+    <string name="le180213_title_text_default">Title</string>
+    <string name="le180213_director_text_default">Director</string>
+    <string name="le180213_description_text_default">Description</string>
+    <string name="le180213_image_description_default">Desc</string>
 
     <!--le180215-->
-    <string name="notify">Notify</string>
+    <string name="le180215_button_text">Notify</string>
 
     <!--le180222-->
     <string name="title_activity_maps">Map</string>
 
     <!--le180313-->
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
-    <string name="submit">Submit</string>
+    <string name="le180313_field_first_name">First Name</string>
+    <string name="le180313_field_last_name">Last Name</string>
+    <string name="le180313_button_text">Submit</string>
 
     <!--le180301-->
     <string name="hello">Hello, OpenGL ES 2.0!</string>
 
     <!--le180329-->
-    <string name="set_wallpaper">Set Wallpaper</string>
+    <string name="le180329_button_text">Set Wallpaper</string>
 
+    <string name="le180403_player_name_text">Sergio Aguero</string>
+    <string name="le180403_player_bio_title">Player\'s Bio</string>
+    <string name="le180403_player_bio">Country: Argentina\nAge: 29 (02/06/1988)\nHeight: 1.73m\nTeam: Manchester City</string>
+    <string name="le180403_player_stats_title">Player\'s Stats</string>
+    <string name="le180403_player_stats_pace">Pace:</string>
+    <string name="le180403_player_stats_shooting">Shooting:</string>
+    <string name="le180403_player_stats_passing">Passing:</string>
+    <string name="le180403_player_stats_dribbling">Dribbling:</string>
 
 </resources>

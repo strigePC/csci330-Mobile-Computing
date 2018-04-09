@@ -6,13 +6,15 @@ public class CurrencyLocation {
     private String countryName;
     private String sign;
     private String currencyCode;
+    private String currencyName;
     private LatLng location;
     private Double currency;
 
-    public CurrencyLocation(String countryName, String sign, String currencyCode, Double currency, LatLng location) {
+    public CurrencyLocation(String countryName, String sign, String currencyCode, String currencyName, Double currency, LatLng location) {
         setCountryName(countryName);
         setSign(sign);
         setCurrencyCode(currencyCode);
+        setCurrencyName(currencyName);
         setCurrency(currency);
         setLocation(location);
     }
@@ -60,5 +62,13 @@ public class CurrencyLocation {
 
     public void setCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
+    }
+
+    public String getCurrencyName() {
+        return currencyName;
+    }
+
+    public void setCurrencyName(String currencyName) {
+        this.currencyName = currencyName;
     }
 }

@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/first_name"/>
+        android:text="@string/le180313_field_first_name"/>
     <EditText
         android:id="@+id/le180313_fname"
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/last_name"/>
+        android:text="@string/le180313_field_last_name"/>
     <EditText
         android:id="@+id/le180313_lname"
         android:layout_width="match_parent"
@@ -30,6 +30,6 @@
         android:id="@+id/le180313_submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/submit"/>
+        android:text="@string/le180313_button_text"/>
 
 </LinearLayout>
